@@ -1,0 +1,36 @@
+body {
+/*	background-color: #F9F9FA;
+	background-color: orange;
+	background-color: #B3E5EC;*/
+}
+.activity-box {
+	box-shadow: 0px 1.5px 1px 0px #6C7D88;
+}
+
+.bg-gradient {
+	/*background: url(../imgs/plain-grad-1.jpg)  no-repeat ;*/
+	background: linear-gradient(90deg,rgba(119, 232, 214) 5%, 
+		rgba(158, 173, 228)), no-repeat center; 
+ 	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+  	background-size: cover;
+}
+.welcome-text {
+	/*font-weight: 550;*/
+	font-size: 1.4em;
+} 
+.login-btn {
+	background-color: #5FC3C3;
+	border-color: transparent;
+	/*font-weight: bolder;*/
+}
+.brand-span {
+	font-weight: bold;
+	display: inline-block;
+}
+ul.navbar-nav li a:hover{
+	color: orange!important;
+	/*display: none;*/
+}
+#5FC3C3
