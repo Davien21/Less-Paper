@@ -9,16 +9,14 @@
 		<link rel="stylesheet" type="text/css" href="./css/index.css">
 		<script src="./js/jquery-3.4.1.js"></script>
 		<script src="./js/bootstrap.js"></script>
-
 	</head>
 	<body class="bg-gradient">
 		<nav class="navbar navbar-light navbar-expand-xl bg-white">
 			<div class="container">
 				<a href="./index.html" class="navbar-brand" >
 					<span class="brand-span">
-						<span class="text-orange">LESS</span>
+						<span class="text-orange-2">LESS</span>
 						<span class="">PAPER</span>
-					
 					</span>
 				</a>
 				<button class="navbar-toggler" data-toggle="collapse" data-target="#nav-menu_div" id="toggle-btn">
@@ -26,8 +24,8 @@
 	  			</button>
 	  			<div class="collapse navbar-collapse text-center" id="nav-menu_div">
 	  				<ul class="navbar-nav ml-auto">
-	  					<li class="nav-item active">
-	  						<a href="./index.html" class="nav-link">Home</a>
+	  					<li class="nav-item active ">
+	  						<a href="./index.html" class="nav-link ">Home</a>
 	  					</li>
 	  					<li class="nav-item ">
 	  						<a href="#" class="nav-link" >Payment Options</a>
@@ -42,36 +40,51 @@
 	  			</div>
 			</div>
 		</nav>
-		<div class="container-fluid">
-			
-			<div class="container">
-
-			<div class="row my-5">
-				<div class="mx-auto mt-5 col-12 col-sm-9 col-md-7 col-lg-5 col-xl-4 bg-white rounded activity-box px-sm-5 py-3">
-					<div class="text-center text-md-left welcome-text">Welcome to 
-						<div class="brand-span">
-							<span class="text-orange">LESS</span>
-							<span class="">PAPER</span>
+		<main>
+			<section id="login-section">
+				<div class="container">
+					<div class="row my-5">
+						<div class="mx-auto mt-1 col-12 col-sm-9 col-md-7 col-lg-5 col-xl-4 bg-white rounded activity-box px-4 px-sm-5 py-3">
+							<div class=" welcome-text">Welcome to 
+								<div class="brand-span">
+									<span class="text-orange-2">LESS</span>
+									<span class="">PAPER</span>
+								</div>
+							</div>
+							<form action="" method="post">
+								<div class="form-group mt-4 font-weight-bold">
+									<div class="">
+										<label class="d-block pt-1">Organisation:</label>
+										<input type="text" name="user-name" class="form-contrl mb-2">
+									</div>
+									<div class="">
+										<label class="d-block pt-1">Username:</label>
+										<input type="text" name="user-name" class="form-contrl mb-2">
+									</div>
+									<div class="">
+										<label class="d-block">Password:</label>
+										<input type="password" name="password" class="form-contrl">
+									</div>
+								</div>
+								<div class="mb-1 mt-2">
+									<button class="col-12 btn btn-block btn-orange-2 blue-btns">Login</button>
+								</div>
+								<p class=" mt-2 ro">
+									<span class="ml-aut">First time?</span>
+									<a href="" class="text-orange-2 d-inline-block ">
+										click here to subscribe now
+									</a>
+								<p>
+							</form>
+							
+						
+							
+							
 						</div>
-						
 					</div>
-					
-					<p class="mb-1 mt-3 ro ext-center">
-						<button class="btn btn-block btn-orange login-btn">Login</button>
-					</p>
-					
-					<p class="text-center text-md-left mt-3 ro">
-						<span class="ml-aut">First time?</span>
-						
-						<a href="" class="text-orange d-inline-block ">
-							click here to subscribe now
-						</a>
-					<p>
 				</div>
-				
-			</div>
-		</div>
-		</div>
+			</section>
+		</main>
 		
 	</body>
 </html>

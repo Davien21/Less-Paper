@@ -79,6 +79,9 @@ div.fullHeight {
 .text-orange {
 	color: #FF9800;
 }
+.text-orange-2 {
+	color: #FF6200;
+}
 .text-orange:hover {
 	color: #FF9800;
 }
@@ -140,6 +143,7 @@ div.fullHeight {
 	background-color: #FF9800;
 	border-color: #FF9800;
 }
+
 .btn-orange-alt {
 	color: #fff;
 	background-color: #FF9800;
