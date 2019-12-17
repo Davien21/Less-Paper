@@ -64,6 +64,8 @@ label {
 	/*bottom: 15px;*/
 	color: red;
 	text-shadow: 0 0 3px black;
+	/*border: 1px solid white;*/
+
 
 }
 .alert-navy-blue {
@@ -87,4 +89,8 @@ hr.underline-orange {
 	top: -47px;
 	width: 100%;*/
 
+}
+.job-name {
+	text-transform: capitalize;
+	color: red;
 }
