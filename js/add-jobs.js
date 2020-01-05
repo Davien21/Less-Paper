@@ -1,4 +1,4 @@
-// let box_header_text = document.querySelector('.box-header-text');
+let box_header_text = document.querySelector('.box-header-text');
 let record_counter = document.querySelector('.record-counter');
 let navbar_toggler = document.querySelector('.navbar-toggler');
 let navbar_menu = document.querySelector('#nav-menu_div');
@@ -6,6 +6,7 @@ let log_out_form = document.querySelector('.log-out-form');
 let display_modal_body = document.querySelector('.display-modal-body');
 let header_for_record_page = document.querySelector('#header-record-page');
 let confirm_record_tag = document.querySelector('#confirm-record-tag');
+// let section_name_tag = document.querySelector('.section_name');
 let tHead_row = document.querySelector('.tHead-row');
 let edit_record_btn = document.querySelector('.edit-records-btn');
 let confirm_btn = document.querySelector('.confirm-btn');
@@ -15,8 +16,7 @@ let display_modal = document.querySelector('#display-modal');
 let show_records = document.querySelector('#display-modal-btn');
 let modal_close_btn = document.querySelector('.modal-x');
 let record_container = document.querySelector('#record-output');
-
-let final_confirm_modal = document.querySelector('.final-confirm')
+let go_to_jobs_btn = document.querySelector('button[name=go-to-jobs]')
 let main_section = document.querySelector('main>section');
 let tHead_column_tops = document.querySelector('.tHead-column-tops');
 if (main_section.id === 'add-jobs-section') {
@@ -26,19 +26,19 @@ if (main_section.id === 'add-jobs-section') {
 	first_edit_field_name = 'job_name';
 	second_edit_field_name = 'job_type';
 	record_name = 'jobs';
+	// section_name_tag.innerText = 'Jobs';
 }else if (main_section.id === 'add-depts-section') {
 	xhr_request = 'dept_data';
 	first_edit = 'edit_dept';
 	second_edit = 'edit_HOD';
 	first_edit_field_name = 'dept';
 	second_edit_field_name = 'head';
-	record_name = 'dept';
-}
-// console.log(next_page_btn)
+	record_name = 'dept'
+	// section_name_tag.innerText = 'Departments';
 
-// else if (main_section.id === 'add-files-section') {
-// 	xhr_request = 'file_types_data';
-// }
+}else if (main_section.id === 'add-files-section') {
+	xhr_request = 'file_types_data';
+}
 
 function getRecordsNo () {
 	let xhr = new XMLHttpRequest;
@@ -77,6 +77,14 @@ function changeModalHeader(situation = 'final-confirm') {
 		}
 	}
 }
+
+//This next 2 functions is under construction per my decision to seperate department jobs or not
+// changeBoxHeader('jobs','Productions');
+function changeBoxHeader (message_type,Record) {
+	if (message_type === 'jobs') {
+		box_header_text.innerText = 'Jobs in '+ Record;
+	}
+}
 function getEachRecord () {
 	let xhr = new XMLHttpRequest;
 	xhr.open("POST","http://localhost/lessPaper/extra_pages/apis/lessPaper-api.php",true);
@@ -101,6 +109,7 @@ function getEachRecord () {
 		}
 	}  
 }
+
 function updateRecordInfo (index,requestName,field_name,initial_value,new_value,xhttp_response) {
 	if (initial_value !== new_value) {
 		let confirm_edit = confirm('Are you sure you want to Change ' +initial_value+" to "+new_value);
@@ -157,6 +166,7 @@ function resetRecordTable (index,xhttp_response) {
 			remaining_rows_arr.push(all_rows[j]);
 		}
 	}
+	console.log(remaining_rows_arr)
 	for (let k = 0; k<remaining_rows_arr.length;++k) {
 		let record_nums = remaining_rows_arr[k].children[0];
 		record_nums.innerText = k+1;
@@ -323,6 +333,11 @@ navbar_toggler.onclick = () => {
 		setTimeout(function(){log_out_form.classList.remove('mx-auto')}, 350);
 	}
 }
+console.log(document.querySelector('main>section'));
+// console.log(document.querySelectorAll('select'));
+console.log(confirm_record_tag);
+console.log(go_to_jobs_btn);
+// console.log(section_name_tag);
 function getRecordsTable (request) {
 	record_container.innerHTML = '';
 	let xhr = new XMLHttpRequest;
@@ -369,7 +384,7 @@ show_records.onclick = () => {
 modal_close_btn.onclick = () => {
 	closeModalBody();
 }
-final_confirm_modal.onclick = () => {
+go_to_jobs_btn.onclick = () => {
 	if (record_counter.innerText == 0) {
 		alert("You Haven't Added any "+record_name+" yet");
 		return false;
@@ -380,8 +395,5 @@ final_confirm_modal.onclick = () => {
 	return false;	
 }
 confirm_btn.onclick = ()=> {
-	// if (record_name = 'dept') {
-	// 	next_page_btn = true;
-	// }
-	
+	go_to_jobs_btn = true;
 }	

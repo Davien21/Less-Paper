@@ -1,3 +1,7 @@
+.simple-box {
+    /*box-shadow: 0px 0px 5px 2px #F0F0F0;*/
+    border: 1px solid #999797;
+}
 .red {
 	background-color: red;
 }
@@ -127,6 +131,25 @@ div.fullHeight {
 .no-text-shadow {
 	text-shadow: none;
 }
+.arial {
+	font-family: Arial;
+	
+}
+.modal-box-shadow {
+	box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 0.2);
+}
+.helvetica {
+	font-family: helvetica;
+}
+
+.no-word-wrap {
+	white-space: nowrap;
+}
+.courier {
+	font-family: Courier new;
+
+}
+
 .s-thru {
 	text-decoration: line-through;
 }
@@ -163,6 +186,17 @@ div.fullHeight {
 	color: #fff;
 	background-color: #F8931D;
 	border-color: #F8931D;
+}
+.btn-outline-orange-2 {
+	color: #FF6200;
+	background-color: transparent;
+	background-image: none;
+	border-color: #FF6200;
+}
+.btn-outline-orange-2:hover {
+	color: #fff;
+	background-color: #FF6200;
+	border-color: #FF6200;
 }
 .btn-blue-3 {	
 	color: #fff;
@@ -240,9 +274,20 @@ div.fullHeight {
   flex: 0 0 63%;
   width: 63%;
 }
-/*aside,main {
-	height: 85vh;
-}*/
+.pointer {
+	cursor: pointer;
+}
+.bg-transparent {
+	background-color: transparent;
+}
+.simple-box {
+	box-shadow: 0px 0px 5px 2px #F0F0F0;
+	border: 1px solid #e1e1e1;
+}
+.dark-filter {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+	z-index: 1070;
+}
 @media (min-width: 1200px) {
 	.font-5 {
 		font-size: 4em !important;
@@ -329,83 +374,10 @@ div.fullHeight {
 	}
 }
 @media only screen and (min-width: 240px) and (max-width: 359) {
-	.font-5 {
-		font-size: 1.5em !important;
-	}
-	.font-4 {
-		font-size: 1em !important;
-	}
-	.font-3 {
-		font-size: 1em !important;
-	}
-	.font-2 {
-		font-size: 0.7em !important;
-	}
-	.font-1 {
-		font-size: 0.6em !important;
-	}
+
 }
-.pt-5h {
-  padding-top: 2.5rem !important;
-}
-.p-5h {
-  padding: 2.5rem !important;
-}
-.py-6 {
-  padding: 5rem !important;
-}
-.gutter-out-0 {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-.gutter-out-5 {
-    margin-left: 2.5px !important;
-    margin-right: 2.5px !important;
-}
-.gutter-out-10 {
-    margin-left: 5px !important;
-    margin-right: 5px !important;
-}
-.gutter-out-20 {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
-}
-.gutter-out-30 {
-    margin-left: 15px !important;
-    margin-right: 15px !important;
-} 
-.gutter-out-40 {
-    margin-left: 20px !important;
-    margin-right: 20px !important;
-} 
-.gutter-in-0 {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-.gutter-in-5 {
-    margin-left: -2.5px !important;
-    margin-right: -2.5px !important;
-}
-.gutter-in-10 {
-    margin-left: -5px !important;
-    margin-right: -5px !important;
-}
-.gutter-in-20 {
-    margin-left: -10px !important;
-    margin-right: -10px !important;
-}
-.gutter-in-30 {
-    margin-left: -15px !important;
-    margin-right: -15px !important;
-} 
-.gutter-in-35 {
-    margin-left: -17.5px !important;
-    margin-right: -17.5px !important;
-}
-.gutter-in-40 {
-    margin-left: -20px !important;
-    margin-right: -20px !important;
-} 
+
+
 .h-15 {
 	height: 15% !important;
 }
@@ -488,9 +460,7 @@ div.fullHeight {
 	width: 95% !important;
 }
 
-.px-2h {
-	padding: 0px 0.9em !important;
-}
+
 .bg-ash {
 	background-color: #F1F1F1;
 }

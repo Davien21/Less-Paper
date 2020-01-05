@@ -1,3 +1,6 @@
+<?php 
+	require 'validations.php';
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -13,7 +16,7 @@
 	<body class="bg-gradient">
 		<nav class="navbar navbar-light navbar-expand-xl bg-white">
 			<div class="container">
-				<a href="./index.html" class="navbar-brand" >
+				<a href="./index.php" class="navbar-brand" >
 					<span class="brand-span">
 						<span class="text-orange-2">LESS</span>
 						<span class="">PAPER</span>
@@ -25,7 +28,7 @@
 	  			<div class="collapse navbar-collapse text-center" id="nav-menu_div">
 	  				<ul class="navbar-nav ml-auto">
 	  					<li class="nav-item active ">
-	  						<a href="./index.html" class="nav-link ">Home</a>
+	  						<a href="./index.php" class="nav-link ">Home</a>
 	  					</li>
 	  					<li class="nav-item ">
 	  						<a href="#" class="nav-link" >Payment Options</a>
@@ -51,23 +54,27 @@
 									<span class="">PAPER</span>
 								</div>
 							</div>
-							<form action="" method="post">
+							<form action="" method="post" autocomplete="off">
 								<div class="form-group mt-4 font-weight-bold">
-									<div class="">
+									<div class="mt-3 mb-2">
 										<label class="d-block pt-1">Email Address:</label>
-										<input type="text" name="user-name" class="form-contrl mb-2">
+										<input type="text" name="email" class="" value="<?=$email?>">
+										<span class="errTag"><?=$emailerr?></span>
+
 									</div>
 									<div class="">
 										<label class="d-block">Password:</label>
-										<input type="password" name="password" class="form-contrl">
+										<input type="password" name="pass" class="">
+										<span class="errTag"><?=$pass_err?></span>
+
 									</div>
 								</div>
 								<div class="mb-1 mt-2">
-									<button class="col-12 btn btn-block btn-orange-2 blue-btns">Login</button>
+									<button class="col-12 btn btn-block btn-orange-2 blue-btns" name="login-btn">Login</button>
 								</div>
 								<p class=" mt-2 ro">
 									<span class="ml-aut">First time?</span>
-									<a href="./extra_pages/database-creation.html" class="text-orange-2 d-inline-block ">
+									<a href="./subscribe.php" class="text-orange-2 d-inline-block ">
 										click here to subscribe now
 									</a>
 								<p>

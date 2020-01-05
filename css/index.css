@@ -1,5 +1,7 @@
 body {
-
+	background-color: #B3E5EC;
+}
+.less-paper-blue {
 	background-color: #B3E5EC;
 }
 .activity-box {
@@ -37,7 +39,6 @@ input {
 	height: 25px;
 	border:none;
 	border-bottom: 1px solid  #B3E5EC;
-
 	width: 100%;
 }
 
@@ -73,8 +74,8 @@ label {
 	background-color: #307597;
 	border-color: #c6c8ca;
 }
-.thank-you-text {
-	font-size: 1.3em;	
+.box-header-text {
+	font-size: 1.2em;	
 	
 }
 
@@ -93,4 +94,114 @@ hr.underline-orange {
 .job-name {
 	text-transform: capitalize;
 	color: red;
+}
+.api-output {
+	height: 100px;
+	width: 200px;
+}
+.errTag {
+	color: red;
+	font-size: 0.9em;
+	font-weight: normal;
+}
+.dept-check-header-text {
+	letter-spacing: 1px;
+	font-size: 1.3em;
+}
+
+@keyframes bring_down {
+    from {top: -420px;}
+    to {top: 0px;}
+}
+@keyframes go_up {
+    from {top: 0px;}
+    to {top: -550px;}
+}
+.modal-x {
+	padding:2px 8px;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	font-weight: bold;
+	color: #EE3200 !important;
+
+	/*text-shadow: 0px 0px 1px #c45252;*/
+
+}
+@keyframes fade-in {
+
+}
+.fade {
+	/*transition: f*/
+}
+.confirm-btn {
+
+}
+.delete-record {
+	border: 1px solid red;
+	border-radius: 50%;
+	color: red;
+	margin-left: 1rem !important;
+	cursor: pointer;
+	font-size: 0.8em;
+	padding: 1px 5px;
+}
+.delete-record:hover {
+	background-color: red;
+	color: white;
+}
+.modal-x:hover {
+	font-weight: normal;
+
+	padding:2px 8px;
+	
+	background-color: red;
+	text-shadow: 2px 2px 4px #333;
+	color: white !important;
+}
+
+.modal_down {
+	animation: bring_down 0.5s;
+}
+.modal_up {
+	/*max-height: 70vh;
+	overflow-y: auto;*/
+	animation: go_up 0.5s;
+}
+
+#display-modal{
+	
+}
+
+.all-depts td,.all-depts th {
+	/*vertical-align: middle;*/
+}
+.dept-output {
+	max-height: 65vh !important;
+	overflow-y: auto;
+}
+.stable-height {
+	max-height: 65vh;
+	overflow-y: auto;
+}
+.display-modal-body {
+	overflow-x: hidden;
+	position: absolute;
+	z-index: 1070;
+}
+#display-modal-btn:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+#dept-output p {
+	margin: 0;
+	padding: 0;
+}
+.record-counter {
+	/*border: 1px solid orange;*/
+	margin-left: 30px;
+	background-color: #FF6200;
+	color: white;
+	/*border-radius: 50%;*/
+	padding: 2px 7px;
 }
